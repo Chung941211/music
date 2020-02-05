@@ -4,7 +4,7 @@ import {
     Switch,
     Route,
     Link
-  } from "react-router";
+  } from "react-router-rom";
 import index from '../pages/index/index';
 
 
