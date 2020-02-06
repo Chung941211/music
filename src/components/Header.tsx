@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 export interface headerProps { 
-    name: String; 
+    title : String; 
 }
 
 export class Header extends Component<headerProps, {}> {
   render () {
-    const { name } = this.props
+    const { title } = this.props
     return (
         <div>
-            { name }
+           test
         </div>
     )
   }
