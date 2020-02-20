@@ -6,7 +6,7 @@ export interface headerProps {
 
 export default class Index extends Component<headerProps, {}> {
   render () {
-    const { name } = this.props
+    const { name } = this.props;
     return (
         <div>
             { name }
