@@ -5,10 +5,15 @@ export interface headerProps {
 }
 
 export default class Index extends Component<headerProps, {}> {
+
+  componentWillMount () {
+    console.log('test');
+  }
+  
   render () {
     const { name } = this.props;
     return (
-        <div>
+        <div className="video">
             { name }
         </div>
     )

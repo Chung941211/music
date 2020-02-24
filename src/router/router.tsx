@@ -9,9 +9,9 @@ import index from '../pages/index/index';
 
 const routeApp = () => (
     <Router>
-        <Route exact path="/"   />
+        <Route exact path="/"   component={index}  />
         <Switch>
-            <Route path={`/video`} />
+            <Route path={`/video`} component={index} />
         </Switch>
     </Router>
 );
