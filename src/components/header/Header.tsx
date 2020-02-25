@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import './Header.scss';
 // interface HeaderProps { 
 //     title : String; 
 // }
 
 const Header: React.SFC = () => (
-  <header>
-    <NavLink exact to="/" activeClassName="nav-active">
+  <header className="header">
+    <NavLink exact to="/"  activeClassName="nav-active">
       推荐音乐
     </NavLink>
     <NavLink to="/hot" activeClassName="nav-active">
