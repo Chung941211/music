@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export interface headerProps { 
-    title : String; 
-}
+// interface HeaderProps { 
+//     title : String; 
+// }
 
-export class Header extends Component<headerProps, {}> {
-  render () {
-    const { title } = this.props;
-    return (
-        <div>
-           test
-        </div>
-    )
-  }
-}
+const Header: React.SFC = () => (
+  <header>
+    <NavLink exact to="/" activeClassName="nav-active">
+      推荐音乐
+    </NavLink>
+    <NavLink to="/hot" activeClassName="nav-active">
+      热歌榜
+    </NavLink>
+    <NavLink to="/search" activeClassName="nav-active">
+      搜索
+    </NavLink>
+  </header>
+)
+
+export default Header

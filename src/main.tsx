@@ -1,10 +1,11 @@
 import * as React from "react";
-import Roues from './router/router'
+import Routes from './router/router'
 // 入口文件
 
 const App: React.FC = () => {
   return (
-    <Roues />
+    <Routes />
+    
   );
 }
 

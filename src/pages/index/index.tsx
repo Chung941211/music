@@ -9,11 +9,12 @@ export default class Index extends Component<headerProps, {}> {
   componentWillMount () {
     console.log('test');
   }
-  
+
   render () {
     const { name } = this.props;
     return (
         <div className="video">
+          1
             { name }
         </div>
     )
