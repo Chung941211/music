@@ -1,5 +1,7 @@
 export const Apis = async (method: string, url: string, data?: any) => {
-const API_LOACATION = process.env.APP_API_ENDPOINT
+
+ const API_LOACATION = process.env.APP_API_ENDPOINT
+
  const res = await fetch(`${API_LOACATION}/${url}`, {
      method,
      headers: {
@@ -7,5 +9,6 @@ const API_LOACATION = process.env.APP_API_ENDPOINT
      },
      body: JSON.stringify(data)
  })
+ 
  return res.json()
 }

@@ -7,15 +7,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { History } from 'history';
 import { stateObject, reducerRoot, sagaRoot } from './index';
 
-const configureStore = (history: History, initialState: stateObject) => {
+const configureStore = (history: History) => {
 
-  const composeEnhancers = composeWithDevTools();
+  const composeEnhancers = composeWithDevTools({});
 
   const sagaMiddleware = createSagaMiddleware();
 
   const store = createStore(
     reducerRoot(history),
-    initialState,
     composeEnhancers(applyMiddleware(routerMiddleware(history), sagaMiddleware))
   )
 
