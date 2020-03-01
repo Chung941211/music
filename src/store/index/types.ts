@@ -1,15 +1,17 @@
 
 
-interface Creator {
-    userId: string,
-    nickname: string
-}
-
-export interface PalyList {
-    creator: Creator,
-    coverImgUrl: string,
-    name: string,
-    id: string
+export interface Personalized {
+    id: number
+    type: number
+    name: string
+    copywriter: string
+    picUrl: string
+    canDislike: boolean
+    trackNumberUpdateTime: number,
+    playCount: number,
+    trackCount: number,
+    highQuality: boolean,
+    alg: string
 }
 
 export enum IndexActionType {
@@ -20,6 +22,6 @@ export enum IndexActionType {
 
 export interface IndexState {
     readonly loading: boolean
-    readonly data: PalyList[]
+    readonly data: Personalized[]
     readonly errors?: string
 }

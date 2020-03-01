@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
-// interface HeaderProps { 
-//     title : String; 
-// }
 
 const Header: React.SFC = () => (
   <header className="header">

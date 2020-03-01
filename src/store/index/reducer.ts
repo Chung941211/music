@@ -13,7 +13,7 @@ const reducer: Reducer<IndexState> = (state = initState, action) => {
             return { ...state, loading: true }
         }
         case IndexActionType.INDEX_FETCH_SUCCEEDED: {
-            return { ...state, loading: false, data: action.payload }
+            return { ...state, loading: false, data: action.payload.result }
         }
         case IndexActionType.INDEX_FETCH_FAILED: {
             return { ...state, loading: false, data: action.payload }

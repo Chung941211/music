@@ -3,10 +3,10 @@ import { IndexActionType } from './types';
 import { indexFetchSucceeded, indexFetchFailed } from './action';
 import { Apis } from '../../utils/http';
 
-function* getPlaylist () {
+function* getPersonalized () {
   try {
 
-    const result = yield call(Apis, 'get', '/related/playlist');
+    const result = yield call(Apis, 'get', '/personalized');
     
     yield put(indexFetchSucceeded(result));
 
@@ -17,7 +17,7 @@ function* getPlaylist () {
 
 
 function* watchRequeset () {
-    yield takeEvery(IndexActionType.INDEX_FETCH_REQUESTED, getPlaylist)
+    yield takeEvery(IndexActionType.INDEX_FETCH_REQUESTED, getPersonalized)
 }
 
 export default function* indexSaga () {
