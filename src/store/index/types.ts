@@ -1,7 +1,7 @@
 
 
 export interface Personalized {
-    id: number
+    id: string
     type: number
     name: string
     copywriter: string

@@ -19,7 +19,7 @@ type indexProps = personalizedState & personalizedDispatch
 
 class PersonalizedList extends React.Component<indexProps> {
     
-  public componentDidMount() {
+  public componentDidMount () {
     const { indexFetchRequst: fr, data } = this.props;
     if (data.length === 0) {
       fr();  
@@ -28,7 +28,7 @@ class PersonalizedList extends React.Component<indexProps> {
 
   public render () {
     const { data } = this.props;
-    const personalizedList = data.splice(0, 6);
+    const personalizedList = data.slice(0, 6);
     return (
         <div>
           <div className="remd">推荐歌单</div>

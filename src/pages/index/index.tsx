@@ -1,21 +1,15 @@
 import * as React from 'react';
 import PersonalizedList from './personalized'
-
+import NewMusic from './newMusic'
 import './index.scss';
 
-
-class Index extends React.Component {
-    
-  public componentDidMount() {
-  }
-
-  public render () {
-    return (
-        <div>
-          <PersonalizedList />
-        </div>
-    )
-  }
-}
+const Index: React.FC = () => {
+  return (
+    <div>
+      <PersonalizedList />
+      <NewMusic />
+    </div>
+  )
+} 
 
 export default Index
