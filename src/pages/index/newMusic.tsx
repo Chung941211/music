@@ -1,15 +1,24 @@
 import * as React from 'react';
 import { Apis } from '../../utils/http';
 
+interface album {
+    name: string
+}
 interface artists {
-    name: string,
+    name: string
+}
+
+interface song {
+    name: string
     id: string
+    album: album
+    artists: artists[]
 }
 
 interface musicList {
     id: string
     name: string
-    artists: artists[]
+    song: song
 }
 
 interface State {
@@ -38,11 +47,24 @@ class NewMusic extends React.Component<{}, State> {
             <div>
                 <div className="remd">最新音乐</div>
 
-                <div>
+                <div className="m m-list">
                     {
                         musicList.map(music => 
-                            <div key={music.id}>
-                                {music.name}
+                            <div className="m-item" key={music.id}>
+                                <div>
+                                   <div>{music.name} </div>
+                                   <div className="sginfo">
+                                       <i className="sghot"></i>
+                                       {
+                                         music.song.artists.map(artists => 
+                                             artists.name
+                                         )
+                                       } - {music.song.album.name}
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
                             </div>
                         )
                     }
