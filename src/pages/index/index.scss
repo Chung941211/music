@@ -68,6 +68,9 @@
         white-space: nowrap;
         word-break: normal;
     }
+    .sgchfl{
+        flex: 1 1 auto;
+    }
     .sghot{
         background: url(//s3.music.126.net/mobile-new/img/index_icon_2x.png?5207a28…=) no-repeat;
         background-size: 166px 97px;
@@ -75,5 +78,18 @@
         width: 12px;
         height: 8px;
         margin-right: 4px;
+    }
+    .sgchfr{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .sgchply{
+        background: url(//s3.music.126.net/mobile-new/img/index_icon_2x.png?5207a28…=) no-repeat;
+        background-size: 166px 97px;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-position: -24px 0;
     }
 }

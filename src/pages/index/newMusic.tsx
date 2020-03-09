@@ -51,7 +51,7 @@ class NewMusic extends React.Component<{}, State> {
                     {
                         musicList.map(music => 
                             <div className="m-item" key={music.id}>
-                                <div>
+                                <div className="sgchfl">
                                    <div>{music.name} </div>
                                    <div className="sginfo">
                                        <i className="sghot"></i>
@@ -62,8 +62,8 @@ class NewMusic extends React.Component<{}, State> {
                                        } - {music.song.album.name}
                                     </div>
                                 </div>
-                                <div>
-
+                                <div className="sgchfr">
+                                    <span className="u-hmsprt sgchply"></span>
                                 </div>
                             </div>
                         )
