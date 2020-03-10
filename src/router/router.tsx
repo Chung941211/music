@@ -6,14 +6,16 @@ import {
 } from 'react-router-dom'
 import Header from '../components/header/Header';
 import index from '../pages/index/index';
-
+import Player from '../components/player/player';
 
 const routeApp = () => (
     <Router>
         <Header />
         <Switch>
-            <Route exact path="/"  component={index}  />
+            <Route exact path="/" component={index}  />
         </Switch>
+        <Player />
+
     </Router>
 );
 
