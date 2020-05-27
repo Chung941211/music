@@ -28,7 +28,7 @@ class PersonalizedList extends React.Component<indexProps> {
 
   public render () {
     const { data } = this.props;
-    const personalizedList = data.slice(0, 6);
+    const personalizedList = data.length > 0 ? data.slice(0, 6) : [];
     return (
         <div>
           <div className="remd">推荐歌单</div>
